@@ -1,3 +1,0 @@
-D:\QFTS\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\REAL.dir/objects.a
-D:\QFTS\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\REAL.dir/objects.a @CMakeFiles\REAL.dir\objects1.rsp
-D:\QFTS\Tools\mingw1310_64\bin\g++.exe -g -mwindows -Wl,--whole-archive CMakeFiles\REAL.dir/objects.a -Wl,--no-whole-archive -o REAL.exe -Wl,--out-implib,libREAL.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\REAL.dir\linkLibs.rsp
