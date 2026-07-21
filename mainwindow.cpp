@@ -87,30 +87,18 @@ void MainWindow::on_analyzebutton_clicked()
             ui->statusbutton->setText("Error: Failed to start Python process.");
             return;
         }
+        process.waitForFinished(-1);
 
-        process.waitForFinished();
+        QByteArray rawOutput = process.readAllStandardOutput();
+        QByteArray rawError = process.readAllStandardError();
 
-        if (process.exitStatus() != QProcess::NormalExit || process.exitCode() != 0) {
-            ui->statusbutton->setText("Error: Python script crashed or exited with an error.");
-            return;
+        QString output = QString::fromUtf8(rawOutput);
+        QString errors = QString::fromUtf8(rawError);
+ 
+        if (!errors.isEmpty()) {
+         qDebug() << errors;
         }
 
-        QString output = process.readAllStandardOutput();
-        QString errors = process.readAllStandardError();
-
-        qDebug() << "OUTPUT:";
-        qDebug() << output;
-
-        qDebug() << "ERROR:";
-        qDebug() << errors;
-
-        if (output.trimmed().isEmpty()) {
-            ui->statusbutton->setText("Error: AI returned an empty response.");
-            return;
-        }
-
-        ui->statusbutton->setText("Analysis complete.");
         ui->textBrowser->setPlainText(output);
-
 }
 
