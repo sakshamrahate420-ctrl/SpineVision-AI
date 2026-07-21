@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" alt="SpineVision AI Banner" width="100%">
+  <img src="assets/spinevision_banner_1280x640.png" width="100%">
 </p>
 
 <h1 align="center">🧠 SpineVision AI</h1>
