@@ -20,7 +20,7 @@ Patient clinical notes: {clinical_notes}
 Analyze the MRI image and respond STRICTLY in this exact format, with no extra commentary before or after it, and no internal reasoning shown:
 
 ====================================================
-🧠 SPINEVISION AI MEDICAL REPORT
+ SPINEVISION AI MEDICAL REPORT
 ====================================================
 Patient Notes
 --------------------------------
@@ -49,7 +49,7 @@ Recommendation
 --------------------------------
 <recommendation>
 ----------------------------------------------------
-⚠ AI-assisted report.
+ AI-assisted report.
 This is NOT a medical diagnosis.
 Please consult a qualified radiologist.
 ----------------------------------------------------
