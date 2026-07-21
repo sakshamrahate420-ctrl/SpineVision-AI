@@ -12,8 +12,14 @@ def main():
     print("Clinical Notes:", clinical_notes)
 
   
+   try:
     report = generate_report(mri_path, clinical_notes)
     print("AI Report:\n", report)
+
+except Exception as e:
+    print("========== PYTHON ERROR ==========")
+    print(type(e).__name__)
+    print(str(e))
 
 if __name__ == "__main__":
     main()
